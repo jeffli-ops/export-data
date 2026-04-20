@@ -186,7 +186,7 @@
           download: true,
           header: true,
           skipEmptyLines: true,
-          encoding: "GBK",
+          // 移除硬编码的 GBK，让浏览器/PapaParse 自动处理 UTF-8，或依赖服务器返回的 Content-Type
           complete: function(results) {
             processData(results.data);
             filesProcessed++;
